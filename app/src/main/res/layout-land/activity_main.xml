@@ -1,0 +1,734 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <!--
+    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    -->
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffcee6">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/wholeblock"
+        android:background="#FFCEE6"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:text="Add"
+                android:id="@+id/add"
+                android:layout_weight="1" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:text="Reset"
+                android:id="@+id/reset"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:id="@+id/firstblock">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/player1">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/ver1">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="-1"
+                        android:id="@+id/b1_m1"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="-5"
+                        android:id="@+id/b1_m5"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/ver2">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="+1"
+                        android:id="@+id/b1_p1"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="+5"
+                        android:id="@+id/b1_p5"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/ver3">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Player 1:"
+                        android:id="@+id/textView6"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="20"
+                        android:id="@+id/t1"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="#ad85ff" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/player2">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/ver4" >
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="-1"
+                        android:id="@+id/b2_m1"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="-5"
+                        android:id="@+id/b2_m5"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/ver5" >
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="+1"
+                        android:id="@+id/b2_p1"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="+5"
+                        android:id="@+id/b2_p5"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/linearLayout" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Player 2:"
+                        android:id="@+id/textView5"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="20"
+                        android:id="@+id/t2"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="#ad85ff" />
+                </LinearLayout>
+            </LinearLayout>
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:id="@+id/secondblock">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/player3"
+                android:visibility="gone"
+                android:gravity="left">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/ver7" >
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="-1"
+                        android:id="@+id/b3_m1"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="-5"
+                        android:id="@+id/b3_m5"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/ver8" >
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="+1"
+                        android:id="@+id/b3_p1"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="+5"
+                        android:id="@+id/b3_p5"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/ver9" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Player 3:"
+                        android:id="@+id/textView7"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="20"
+                        android:id="@+id/t3"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="#ad85ff" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/player4"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/ver10" >
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="-1"
+                        android:id="@+id/b4_m1"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="-5"
+                        android:id="@+id/b4_m5"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/ver11" >
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="+1"
+                        android:id="@+id/b4_p1"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="+5"
+                        android:id="@+id/b4_p5"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/ver12" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Player 4:"
+                        android:id="@+id/textView8"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="20"
+                        android:id="@+id/t4"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="#ad85ff" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <!-- third and fourth -->
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:id="@+id/thirdblock">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/player5"
+                android:visibility="gone"
+                android:longClickable="false">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/ver13">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="-1"
+                        android:id="@+id/b5_m1"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="-5"
+                        android:id="@+id/b5_m5"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/ver14">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="+1"
+                        android:id="@+id/b5_p1"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="+5"
+                        android:id="@+id/b5_p5"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/ver15">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:id="@+id/ww"
+                        android:layout_weight="1"
+                        android:text="Player 5:"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="20"
+                        android:id="@+id/t5"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="#ad85ff" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/player6"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/ver16" >
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="-1"
+                        android:id="@+id/b6_m1"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="-5"
+                        android:id="@+id/b6_m5"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/ver17" >
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="+1"
+                        android:id="@+id/b6_p1"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="+5"
+                        android:id="@+id/b6_p5"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/ver18" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Player 6:"
+                        android:id="@+id/qq"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="20"
+                        android:id="@+id/t6"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="#ad85ff" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:id="@+id/fourthblock">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/player7"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/ver19" >
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="-1"
+                        android:id="@+id/b7_m1"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="-5"
+                        android:id="@+id/b7_m5"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/ver20" >
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="+1"
+                        android:id="@+id/b7_p1"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="+5"
+                        android:id="@+id/b7_p5"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/ver21" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Player 7:"
+                        android:id="@+id/textView10"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="20"
+                        android:id="@+id/t7"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="#ad85ff" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/player8"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/ver22" >
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="-1"
+                        android:id="@+id/b8_m1"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="-5"
+                        android:id="@+id/b8_m5"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/ver23" >
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="+1"
+                        android:id="@+id/b8_p1"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:text="+5"
+                        android:id="@+id/b8_p5"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/ver24" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="Player 8:"
+                        android:id="@+id/textView11"
+                        android:layout_weight="1"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="20"
+                        android:id="@+id/t8"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="#ad85ff" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Now Playing"
+                android:id="@+id/result"
+                android:gravity="center" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
